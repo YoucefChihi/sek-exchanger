@@ -1,6 +1,6 @@
-# sek-exchanger-api
+# sek-exchanger
 
-This is the api for [sek-exchanger](https://github.com/YoucefChihi/sek-exchanger).
+This is the front-end for [sek-exchanger-api](https://github.com/YoucefChihi/sek-exchanger-api).
 
 To start: `yarn && yarn dev`
 
