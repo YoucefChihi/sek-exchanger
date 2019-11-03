@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta:300,400&display=swap')
+
+$blue: #0b1667
+$pink: #faa5aa
+$gray: #aeaeae
+$red: #F44336
+
+$seperator-width: 1px
+$form-breakpoint: 500px
+$shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+$shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+
+body
+  padding: 0
+  margin: 0
+  font-family: 'Mukta', sans-serif
+
+*
+  box-sizing: border-box
+
+#root
+  background-color: white
+
+.cta
+  all: unset
+  padding: 4px 12px
+  border: 1px solid transparentize($blue, .25)
+  box-shadow: $shadow
+  border-radius: 2px
+  cursor: pointer
+  color: $blue
+  background-color: white
+
+.main
+  max-width: 600px
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  padding: 2em
+  a.login-cta
+    position: fixed
+    top: 0
+    right: 0
+    margin: 12px
+    &:hover
+      box-shadow: $shadow-2
+  .toolbox
+    width: 100%
+    border: 1px solid transparentize($blue, .25)
+    box-shadow: $shadow
+    border-radius: 2px
+    padding: 8px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    form
+      width: calc(50% - #{$seperator-width / 2})
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      padding: 8px 10px
+      @media screen and (max-width: $form-breakpoint)
+        width: 100%
+      label
+        margin-right: 12px
+        margin-bottom: 8px
+        width: 100%
+        text-align: center
+        font-weight: bold
+        color: $blue
+      input
+        padding: 2px 12px
+        font-size: 16px
+        font-weight: lighter
+        border: 1px solid transparentize($blue, .25)
+        box-shadow: $shadow
+        border-radius: 2px
+      &.with-submit
+        input[type="text"]
+          border-radius: 2px 0px 0px 2px
+          border-right: none
+          width: calc(100% - 77px)
+        input[type="submit"]
+          border-radius: 0px 2px 2px 0px
+          max-width: 77px
+          font-weight: 600
+          font-size: .8em
+          background-color: $blue
+          color: white
+          line-height: 1
+          cursor: pointer
+    .toolbox-seperator
+      width: $seperator-width
+      height: 100%
+      background-color: transparentize(black, .75)
+      @media screen and (max-width: $form-breakpoint)
+        display: none
+  ul.countries
+    width: 100%
+    list-style: none
+    border: 1px solid transparentize($blue, .25)
+    box-shadow: $shadow
+    background: white
+    border-radius: 2px
+    padding: 16px
+    li.country
+      display: flex
+      position: relative
+      .remove
+        position: absolute
+        top: 0
+        right: 8px
+        height: 15px
+        width: 15px
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        line-height: 1
+        color: white
+        background-color: transparentize($red, .25)
+        cursor: pointer
+        &:hover
+          background-color: $red
+      &:not(:first-child)
+        border-top: 1px solid $gray
+        margin-top: 12px
+        padding-top: 16px
+        .remove
+          top: 16px
+      .info
+        width: 170px
+        @media screen and (max-width: $form-breakpoint)
+          width: 100px
+        .info-item
+          .label
+            font-weight: bold
+            color: $blue
+          .value
+            padding-left: 12px
+            font-weight: 300
+      .currency
+        width: calc(100% - 170px)
+        @media screen and (max-width: $form-breakpoint)
+          width: calc(100% - 100px)
+        .title
+          font-weight: 600
+          color: $blue
+          margin-bottom: 12px
+        .currency-item
+          font-weight: 300
+          border: 1px solid transparentize($pink, .25)
+          border-radius: 2px
+          padding-left: 12px
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          margin-bottom: 12px
+          overflow: hidden
+          .detail
+            display: inline-flex
+            width: calc(100% - 130px)
+            justify-content: center
+            flex-direction: column
+            flex-wrap: wrap
+            .label
+              width: 100%
+            .value
+              width: 100%
+              color: $pink
+              font-weight: bold
+          .conversion
+            display: inline-block
+            background-color: $pink
+            color: white
+            font-weight: 400
+            text-align: center
+            width: 100%
+            max-width: 130px
+            padding: 12px
+            box-shadow: $shadow-2
+            .amount
+              white-space: nowrap
+              overflow: hidden
+              text-overflow: ellipsis
+            .equal
+              font-size: 2em
+              line-height: .5
+              
+
+.error
+  z-index: 100
+  display: none
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  padding: 12px
+  background: salmon
+  text-align: center
+  background-color: $red
+  color: white
+  &.open
+    display: block
+
+.loading
+  z-index: 10
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  justify-content: center
+  align-items: center
+  font-size: 4em
+  background-color: transparentize(white, .2)
+  color: transparentize(black, .2)
+  &.open
+    display: flex
+
+.message
+  font-size: 1.4em
+  color: $blue
+  margin: 1em
+  text-align: center
+  line-height: 4

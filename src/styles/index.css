@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta:300,400&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Mukta', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#root {
+  background-color: white;
+}
+
+.cta {
+  all: unset;
+  padding: 4px 12px;
+  border: 1px solid rgba(11, 22, 103, 0.75);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  cursor: pointer;
+  color: #0b1667;
+  background-color: white;
+}
+
+.main {
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.main a.login-cta {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 12px;
+}
+
+.main a.login-cta:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.main .toolbox {
+  width: 100%;
+  border: 1px solid rgba(11, 22, 103, 0.75);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .toolbox form {
+  width: calc(50% - 0.5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .main .toolbox form {
+    width: 100%;
+  }
+}
+
+.main .toolbox form label {
+  margin-right: 12px;
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #0b1667;
+}
+
+.main .toolbox form input {
+  padding: 2px 12px;
+  font-size: 16px;
+  font-weight: lighter;
+  border: 1px solid rgba(11, 22, 103, 0.75);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+}
+
+.main .toolbox form.with-submit input[type="text"] {
+  border-radius: 2px 0px 0px 2px;
+  border-right: none;
+  width: calc(100% - 77px);
+}
+
+.main .toolbox form.with-submit input[type="submit"] {
+  border-radius: 0px 2px 2px 0px;
+  max-width: 77px;
+  font-weight: 600;
+  font-size: .8em;
+  background-color: #0b1667;
+  color: white;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.main .toolbox .toolbox-seperator {
+  width: 1px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 500px) {
+  .main .toolbox .toolbox-seperator {
+    display: none;
+  }
+}
+
+.main ul.countries {
+  width: 100%;
+  list-style: none;
+  border: 1px solid rgba(11, 22, 103, 0.75);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background: white;
+  border-radius: 2px;
+  padding: 16px;
+}
+
+.main ul.countries li.country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.main ul.countries li.country .remove {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+  color: white;
+  background-color: rgba(244, 67, 54, 0.75);
+  cursor: pointer;
+}
+
+.main ul.countries li.country .remove:hover {
+  background-color: #F44336;
+}
+
+.main ul.countries li.country:not(:first-child) {
+  border-top: 1px solid #aeaeae;
+  margin-top: 12px;
+  padding-top: 16px;
+}
+
+.main ul.countries li.country:not(:first-child) .remove {
+  top: 16px;
+}
+
+.main ul.countries li.country .info {
+  width: 170px;
+}
+
+@media screen and (max-width: 500px) {
+  .main ul.countries li.country .info {
+    width: 100px;
+  }
+}
+
+.main ul.countries li.country .info .info-item .label {
+  font-weight: bold;
+  color: #0b1667;
+}
+
+.main ul.countries li.country .info .info-item .value {
+  padding-left: 12px;
+  font-weight: 300;
+}
+
+.main ul.countries li.country .currency {
+  width: calc(100% - 170px);
+}
+
+@media screen and (max-width: 500px) {
+  .main ul.countries li.country .currency {
+    width: calc(100% - 100px);
+  }
+}
+
+.main ul.countries li.country .currency .title {
+  font-weight: 600;
+  color: #0b1667;
+  margin-bottom: 12px;
+}
+
+.main ul.countries li.country .currency .currency-item {
+  font-weight: 300;
+  border: 1px solid rgba(250, 165, 170, 0.75);
+  border-radius: 2px;
+  padding-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.main ul.countries li.country .currency .currency-item .detail {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: calc(100% - 130px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main ul.countries li.country .currency .currency-item .detail .label {
+  width: 100%;
+}
+
+.main ul.countries li.country .currency .currency-item .detail .value {
+  width: 100%;
+  color: #faa5aa;
+  font-weight: bold;
+}
+
+.main ul.countries li.country .currency .currency-item .conversion {
+  display: inline-block;
+  background-color: #faa5aa;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  max-width: 130px;
+  padding: 12px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.main ul.countries li.country .currency .currency-item .conversion .amount {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.main ul.countries li.country .currency .currency-item .conversion .equal {
+  font-size: 2em;
+  line-height: .5;
+}
+
+.error {
+  z-index: 100;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  background: salmon;
+  text-align: center;
+  background-color: #F44336;
+  color: white;
+}
+
+.error.open {
+  display: block;
+}
+
+.loading {
+  z-index: 10;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4em;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.loading.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.message {
+  font-size: 1.4em;
+  color: #0b1667;
+  margin: 1em;
+  text-align: center;
+  line-height: 4;
+}
+/*# sourceMappingURL=index.css.map */
