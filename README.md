@@ -7,18 +7,20 @@ To start: `yarn && yarn dev`
 ## Would do given more time:
 
 ### Front-end:
+
 - Setup SSR, would use next.js for that
 - Make it better responsive
 - Separate styles by component
 - Use redux or react context api for state management
 
-
 ### Back-end:
+
 - Proper login logic, not just random token generation
 - Proper logging
 - Session management
 
 ### Both:
+
 - Put sensitive parameters in .env
 - Use typescript
 - Configure project to work with docker

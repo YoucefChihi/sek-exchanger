@@ -1,44 +1,44 @@
-import {getCountryByName, login} from '../api';
+import { getCountryByName, login } from "../api";
 
 const handleCountrySearchSubmit = (countryName, controls) => async e => {
-  const {setLoading, setError, setCountries} = controls;
-  e.preventDefault ();
-  setLoading (true);
+  const { setLoading, setError, setCountries } = controls;
+  e.preventDefault();
+  setLoading(true);
   try {
-    const data = await getCountryByName (countryName);
-    setCountries (countries => {
+    const data = await getCountryByName(countryName);
+    setCountries(countries => {
       return [data, ...countries];
     });
-    setError ('');
+    setError("");
   } catch (error) {
     if (error.response) {
-      const {data, status} = error.response
-      setError (`${status} - ${data}`);
+      const { data, status } = error.response;
+      setError(`${status} - ${data}`);
     } else {
-      setError (error.message);
+      setError(error.message);
     }
   } finally {
-    setLoading (false);
+    setLoading(false);
   }
 };
 
 const handleRemoveCountry = (index, setCountries) => _ => {
-  setCountries (countries => {
-    countries.splice (index, 1);
+  setCountries(countries => {
+    countries.splice(index, 1);
     return [...countries];
   });
 };
 
-const handleLogin = async ({setLoading, setMessage}) => {
-  setLoading(true)
+const handleLogin = async ({ setLoading, setMessage }) => {
+  setLoading(true);
   try {
-    const message = await login()
-    setMessage(message)
-  } catch ({message}) {
-    setMessage(message)
+    const message = await login();
+    setMessage(message);
+  } catch ({ message }) {
+    setMessage(message);
   } finally {
-    setLoading(false)
+    setLoading(false);
   }
-}
+};
 
-export {handleCountrySearchSubmit, handleRemoveCountry, handleLogin};
+export { handleCountrySearchSubmit, handleRemoveCountry, handleLogin };

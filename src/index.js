@@ -8,7 +8,7 @@ import Home from "./routes/Home";
 import Login from "./routes/Login";
 import NotFound from "./routes/NotFound";
 
-const browserHistory = history.createBrowserHistory
+const browserHistory = history.createBrowserHistory;
 ReactDOM.render(
   <Router history={browserHistory}>
     <Switch>
