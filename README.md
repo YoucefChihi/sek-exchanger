@@ -16,7 +16,7 @@ To start: `yarn && yarn dev`
 ### Back-end:
 
 - Proper login logic, not just random token generation
-- Proper logging
+- Proper <em>logging</em>
 - Session management
 
 ### Both:
